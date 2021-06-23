@@ -2,6 +2,7 @@ package logs
 
 import (
 	"encoding/json"
+	"fmt"
 
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
@@ -30,8 +31,8 @@ func Error(message interface{}, fields ...zap.Field) {
 	case map[string]interface{}:
 		{
 			jsonByte, _ := json.Marshal(v)
-			jsonString := string(jsonByte)
-			log.Error(jsonString, fields...)
+			fmt.Println("### LOG ###", string(jsonByte))
+			log.Error(string(jsonByte), fields...)
 		}
 	case string:
 		log.Error(v, fields...)

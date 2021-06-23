@@ -1,7 +1,5 @@
 package repository
 
-import "errors"
-
 // ADAPTER
 type customerMock struct { // me
 	customers []Customer // need to used
@@ -29,5 +27,6 @@ func (c customerMock) GetAll() ([]Customer, error) {
 }
 
 func (c customerMock) GetById(string) (*Customer, error) {
-	return nil, errors.New("!!!ERROR FROM CLIENT")
+	return &c.customers[1], nil
+	// return nil, errors.New("!!!ERROR FROM CLIENT")
 }

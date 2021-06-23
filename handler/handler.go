@@ -13,12 +13,12 @@ func HandleError(err error) { // change to handleError
 		{
 			jsonByte, _ := json.Marshal(err.ErrorMsg)
 			jsonString := string(jsonByte)
-			fmt.Printf("StatusCode:%v, message: %v, error: %v\n", err.Code, err.Message, jsonString)
+			fmt.Printf("## Handler Request ## StatusCode:%v, message: %v, error: %v\n", err.Code, err.Message, jsonString)
 		}
 	case error:
 		{
 			// default
-			fmt.Printf("StatusCode:500, message: %v\n", err.Error())
+			fmt.Printf("## Handler Request ## StatusCode:500, message: %v\n", err.Error())
 		}
 	}
 }
