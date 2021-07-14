@@ -17,6 +17,7 @@
 - middleware
 
 ## Config local
+- use Viper
 
 ## Run local
 - go run .

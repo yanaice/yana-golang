@@ -1,0 +1,12 @@
+port: 8080
+env: local
+cors:
+  allow-all: true
+  allow-domains:
+    - xxx
+    - xxx
+mysql:
+  host: us-cdbr-east-04.cleardb.com
+  username: b501fb636c2f59
+  password: 9c724afb
+  schema: heroku_20f1d925f7ea31a
